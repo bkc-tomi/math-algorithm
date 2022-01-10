@@ -5,8 +5,10 @@ mod my_utils;
 
 fn main() {
     let start = Instant::now();
+    let nums: [u64; 3] = [120, 156, 180];
+    let num: u64 = section_3::q017::multi_lcm(&nums);
 
-    println!("{:?}", section_3::q014::prime_factorization(11));
+    println!("lcm: {}", num);
     
     let end = start.elapsed();
 
