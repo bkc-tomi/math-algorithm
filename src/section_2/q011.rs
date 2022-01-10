@@ -1,9 +1,8 @@
 /**
- * 正の整数nが与えられて、n以下の素数を小さい順に表示するプログラム
+ * 正の整数nが与えられて、n以下の素数とその個数を返すプログラム
  * 制約: (1 <= n <= 65535)
  */
-
-pub fn show_prime_number(n: u16) {
+pub fn show_prime_number(n: u16) -> (Vec<u16>, u16) {
     let mut prime_arr:Vec<u16> = vec![2];
     let mut l: u16 = 1;
     for i in 3..n + 1 {
@@ -20,9 +19,5 @@ pub fn show_prime_number(n: u16) {
         }
     }
 
-    println!("0 ~ {}までの素数一覧", n);
-    for i in prime_arr {
-        print!("{:5}, ", i);
-    }
-    println!("\n{}個の素数が存在", l);
+    return (prime_arr, l);
 }
