@@ -5,8 +5,8 @@ mod my_utils;
 
 fn main() {
     let start = Instant::now();
-    let nums: [u64; 3] = [120, 156, 180];
-    let num: u64 = section_3::q017::multi_lcm(&nums);
+    let cards: [u64; 6] = [40000, 50000, 20000, 80000, 50000, 30000];
+    let num = section_3::q022::comb(&cards);
 
     println!("lcm: {}", num);
     
